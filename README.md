@@ -5,6 +5,12 @@ Aplicação Asp.Net Core para gerenciar vendas de ingressos para um pequeno cine
 
 # Endpoints
 
+![](images/endpoint-filmes.png)
+
+![](images/endpoint-sessoes.png)
+
+![](images/endpoint-ingressos.png)
+
 # Banco de Dados
 Esta aplicação roda sobre um container Docker Microsoft SQL Server 2019.
 
