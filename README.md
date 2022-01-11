@@ -28,5 +28,30 @@ CREATE TABLE [dbo].[filmes](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-
+CREATE TABLE [dbo].[sessoes](
+	[id] [uniqueidentifier] NOT NULL,
+	[dataexibicao] [date] NOT NULL,
+	[horarioinicio] [varchar](5) NOT NULL,
+	[quantlugares] [int] NOT NULL,
+	[quantlugaresreservados] [int] NOT NULL,
+	[valoringresso] [decimal](10, 2) NOT NULL,
+	[idfilme] [uniqueidentifier] NOT NULL,
+	[hashconcorrencia] [varchar](32) NOT NULL,
+ CONSTRAINT [PK_sessoes] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+CREATE TABLE [dbo].[ingressos](
+	[id] [uniqueidentifier] NOT NULL,
+	[idsessao] [uniqueidentifier] NOT NULL,
+	[quantidade] [int] NOT NULL,
+	[valortotal] [decimal](10, 2) NOT NULL,
+ CONSTRAINT [PK_ingressos] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
 ```
