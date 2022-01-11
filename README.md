@@ -1,12 +1,11 @@
 # GncCinemas
-Projeto de conclusão do curso de CSharp.
+Projeto de conclusão do curso de Asp.Net avançado.
 
-Aplicação Asp.Net Core para gerenciar vendas de ingressos para um pequeno cinema da cidade.
+Este projeto se resume a uma aplicação Asp.Net Core Web API para gerenciar vendas de ingressos para um pequeno cinema da cidade.
 
 # Endpoints
 
-
-## Fluxo básico de operação dos endpoints
+## Fluxo básico para utilização dos endpoints
 
 1. Criar Filmes
 2. Criar Sessões para os Filmes
