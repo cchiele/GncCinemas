@@ -6,3 +6,27 @@ Aplicação Asp.Net Core para gerenciar vendas de ingressos para um pequeno cine
 # Endpoints
 
 # Banco de Dados
+Esta aplicação roda sobre um container Docker Microsoft SQL Server 2019.
+
+https://hub.docker.com/_/microsoft-mssql-server
+
+Abaixo o schema do banco de dados:
+
+```sh
+CREATE DATABASE [gnccinemas]
+GO
+USE [gnccinemas]
+GO
+CREATE TABLE [dbo].[filmes](
+	[id] [uniqueidentifier] NOT NULL,
+	[titulo] [varchar](50) NOT NULL,
+	[duracao] [int] NOT NULL,
+	[sinopse] [varchar](100) NOT NULL,
+ CONSTRAINT [PK_filmes] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+```
