@@ -5,6 +5,13 @@ Aplicação Asp.Net Core para gerenciar vendas de ingressos para um pequeno cine
 
 # Endpoints
 
+
+## Fluxo básico de operação dos endpoints
+
+1. Criar Filmes
+2. Criar Sessões para os Filmes
+3. Realizar a vende de Ingressos para uma determinada Sessão
+
 ![](images/endpoint-filmes.png)
 
 ![](images/endpoint-sessoes.png)
